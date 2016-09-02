@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+  <table>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Date of birth</th>
+    </tr>
+    {% for contact in contactList%}
+    <tr>
+      <td>{{contact.first_name}}</td>
+      <td>{{contact.last_name}}</td>
+      <td>{{contact.date_of_birth}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}
